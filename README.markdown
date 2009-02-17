@@ -21,13 +21,17 @@ About the presenter(s?): By day, Justin Henry [http://jdhenry.com] is a mild man
 
 ## What is a social network?
 
-* Utility/function (content is still king - even if it's user-generated)
-* It's People! [Soylent Green reference goes here]
-* user connections are generally many-to-many (a blog is more of a one-to-many relationship pattern) 
-* it has interaction patterns
-	* friendships vs fans
-	* content interaction (why did your users show up here, besides to poke their friends?)
+* Utility/function 
+	* Content is still king (tends to be user-generated, controlled, owned)
+	* Content interaction patterns (generating new content, sharing/republishing, modifying/remixing)
 
+* It's People! [Soylent Green reference goes here]
+	* user relationships are generally many-to-many 
+	* a blog is more of a one-to-many relationship pattern 
+	* User interaction patterns (friendships, fans, friends-you-may-know)
+	
+* Context of web applications
+	* Wikipedia has more on the broader, sociological concepts: http://en.wikipedia.org/wiki/Social_network
 
 
 ## Why build a social network?
@@ -48,6 +52,11 @@ Extend:
 
 ## How do you build a social network?
 
+* Join as many as you can
+	* Get a feel for what others are doing in terms of UI
+	* consider this an education in user interaction and user experience
+	* Just like reading blogs or books will help you become a better writer, using these applications will inform your development process
+	
 
 ### Let's start by deciding what our data looks like
 
@@ -88,7 +97,7 @@ Prefab:
 
 ### Some more gems/plugins you might end up using
 
-* tags
+* acts\_as\_taggable\_on
 * ...
 
 ### Moving forward
