@@ -21,7 +21,6 @@ About the presenter(s?): By day, Justin Henry [http://jdhenry.com] is a mild man
 
 A few networks I'm on:
 
-* [screenshot of gg about page]
 * [screenshot of FF accounts page]
 
 ## What is a social network?
@@ -123,7 +122,7 @@ Several options exist in the rails community:
 
 * Community Engine - bills itself as a "plugin"
 * Insoshi platform
-* Ning (furniture included!)
+* Ning (furniture included! buy vs. build)
 * Bort, etc (just the walls, please)
 * ... and many more ...
 
@@ -173,20 +172,22 @@ Several options exist in the rails community:
 * Next steps 
 	* Carpooling offering/accepting/tracking
 	* Live carbon calculations
-	* Pull events from other services
+	* Pull events from other services (upcoming, eventful)
 	* Import ical files, RSS, microformats (hcal)
 	* Adding to activity feed
+	* backchannel integration
 
 * Tests appear to be generated?
 * Odd mass-assignment solution
 * calendar date select widget is broken 
 
-
-
 ### Moving forward
 
-* Join some social networks and start using them!
-* 
+* Your homework:  Join some social networks and start using them.
+	* They work best when people you know (that's us) are using them with you
+* Join me! Some of my networks are on http://greengaloshes.cc/about/ or http://friendfeed.com/puddlestomping
+* Questions? 
+* Beer!
 
 ### Sources, Resources, and paths for further exploration
 
