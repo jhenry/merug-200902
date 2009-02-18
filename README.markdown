@@ -67,8 +67,8 @@ A few networks I'm on:
 * Join as many as you can
 	* Get a feel for what others are doing in terms of UI
 	* consider this an education in user interaction and user experience
-	* Just like reading blogs or books will help you become a better writer, using these applications will inform your development process	
-	
+	* Just like reading blogs or books will help you become a better writer.
+	* Using these applications will inform your development process	 
 
 ### Let's start by thinking about what our data looks like
 
@@ -109,39 +109,84 @@ create_table :friendships do |t|
 	t.timestamps
 end
 
+A few plugins and tools for consideration:
+
+* Paperclip
+* acts\_as\_commentable
+* acts\_as\_taggable\_on
 
 Prefab:
 
+* Refactoring other people's code is a great way to learn
+
+Several options exist in the rails community:
+
 * Community Engine - bills itself as a "plugin"
-* Insoshi
+* Insoshi platform
 * Ning (furniture included!)
 * Bort, etc (just the walls, please)
 * ... and many more ...
 
 #### Enter Insoshi
 
-* advantage of having a lot of the interactions laid out for you
-* disadvantage: having interactions laid out for you
+* Advantage: having a lot of pieces laid out for you
+	* galleries, forums, blogs, messaging, activity feeds, events
+* Disadvantage: having a lot of pieces laid out for you
+	* may be lots to change or retrofit to your needs
 
 #### Inshtalling Insoshi
 
 * To sphinx or not to sphinx?
+	* might depend on db you are using (don't need it for postgres)
+	* installing sphinx on OSX is a pain - need to add symlink, i.e.:
+	* sudo ln -s /usr/local/mysql/lib /usr/local/mysql/lib/mysql
+	* after, it runs pretty smoothly
+* To install without sphinx, just skip that part of the install process.
 * Yaay, I've got tests, yaaay!
+* installer script installs gems
 
 ### Building on top of Insoshi
 
 * Users and relationships already exist
-* Blogs vs Forums - repurpose for our custom content types
+* Choose a model(s) to repurpose as needed (i.e. for custom content)
+* Build new model(s) for custom content and interactions
 
-### Some more gems/plugins you might end up using
+### Example App - MyEventCarbon
 
-* acts\_as\_taggable\_on
-* ...
+* Idea:  Set up an app to let attendees and promoters of local events:
+ 	* track the carbon footprint of their events 
+	* organize carpools
+	* suggest bus routes and other alternatives
+
+* Repurpose Insoshi's nascent event model
+* Use Gmaps api for geocoding
+* AMEE for carbon calculations (ammee.com)
+* Plugins
+	* ym4r for embedding google maps
+	* rspec\_response\_enhancer - add more descriptive output to rspec
+	* Floppy-amee - for interacting with AMEE data
+
+* Demo:
+	* create account, 
+	* register for event
+
+* Next steps 
+	* Carpooling offering/accepting/tracking
+	* Live carbon calculations
+	* Pull events from other services
+	* Import ical files, RSS, microformats (hcal)
+	* Adding to activity feed
+
+* Tests appear to be generated?
+* Odd mass-assignment solution
+* calendar date select widget is broken 
+
+
 
 ### Moving forward
 
-* Join some social networks and start using them
-* consider this an education in user interaction and user experience
+* Join some social networks and start using them!
+* 
 
 ### Sources, Resources, and paths for further exploration
 
