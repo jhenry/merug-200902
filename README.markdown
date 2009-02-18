@@ -19,35 +19,47 @@ Abstract: What is a social network? Why build a social network? How might one bu
 
 About the presenter(s?): By day, Justin Henry [http://jdhenry.com] is a mild mannered application administrator at a Public Ivy somewhere in New England.  By night, Mr. Henry puts on his cape and develops custom web applications for fun and profit.
 
+A few networks I'm on:
+
+* [screenshot of gg about page]
+* [screenshot of FF accounts page]
+
 ## What is a social network?
 
-* Utility/function 
-	* Content is still king (tends to be user-generated, controlled, owned)
+* Context of web applications
+	* Wikipedia has more on the broader, sociological concepts
+	* http://en.wikipedia.org/wiki/Social_network
+
+* Provides a Utility and/or Function for users
+	* Content is still king 
+	* Content tends to be user-generated, controlled, and owned (unless you are FB, apparently)
 	* Content interaction patterns (generating new content, sharing/republishing, modifying/remixing)
 
-* It's People! [Soylent Green reference goes here]
+* It's People! 
 	* user relationships are generally many-to-many 
 	* a blog is more of a one-to-many relationship pattern 
 	* User interaction patterns (friendships, fans, friends-you-may-know)
 	
-* Context of web applications
-	* Wikipedia has more on the broader, sociological concepts: http://en.wikipedia.org/wiki/Social_network
-
-
 ## Why build a social network?
 
-Let's start with the basics:
+* What are you selling?
+	* An idea, product, theology, movement, etc.
+* Why will your users come here?  
 
-* What are you selling ("selling" in the broad sense - again, why will your customers come here)?  
-* How are you interacting with your customers?
-* How do your customers interact with each other (and those around them)?
+* What channels do you currently reach with your customers?
+	* How are you interacting with your customers?
+	* How do your customers interact with each other?
+	* How do your customers interact with their customers and others around them?
 
-Extend: 
+* The evolution of the newsletter
+	* newsletters -> email lists -> blogs -> social networks?
 
-* How did people interact with their clientelle outside the standard environment (i.e. outside of the store or the catalog model)  
-* progression from newsletters -> email lists -> blogs -> social networks?
-* Provide a service (provide some sort of utility) to your customers and potential customers
-* 
+* It's fun!
+* Provide a service to customers and potential customers
+* Crowdsourcing - i.e. google's image word game
+* Think small - it doesn't have to be the next Facebook.
+* Karma - putting the Service and the Community back in community service
+* Scratch that itch (whiteboard in the sky)
 
 
 ## How do you build a social network?
@@ -55,10 +67,10 @@ Extend:
 * Join as many as you can
 	* Get a feel for what others are doing in terms of UI
 	* consider this an education in user interaction and user experience
-	* Just like reading blogs or books will help you become a better writer, using these applications will inform your development process
+	* Just like reading blogs or books will help you become a better writer, using these applications will inform your development process	
 	
 
-### Let's start by deciding what our data looks like
+### Let's start by thinking about what our data looks like
 
 At the least, you'll probably have: 
 	
@@ -66,22 +78,48 @@ At the least, you'll probably have:
 * Relationships (friends/fans)
 * Content 
 
-### Pre-Fab vs. from scratch
+### Pre-Fab vs. Home Cookin'
 
-Scratch:
+Building from Scratch
 
-* it's not too far off from the build-a-blog in 5 minutes example, 
-	* you just need a few more models, right?
+* It's not too far off from the build-a-blog in 5 minutes example 
+* Just need a few more models, right?
+* Add in a few plugins....
+
+Example relationships
+
+Insoshi's connections migrations:
+
+create_table "connections", :force => true do |t|
+  t.integer  "person_id"
+  t.integer  "contact_id"
+  t.integer  "status"
+  t.datetime "accepted_at"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+end
+
+Dan Fischer's "FischyFriends" example migration
+
+create_table :friendships do |t|
+	t.integer  "user_id",    :null => false
+	t.integer  "friend_id",  :null => false
+	t.datetime "created_at" 
+	t.datetime "updated_at" 
+	t.timestamps
+end
 
 
 Prefab:
 
-* insoshi
-* ning (sort of)
+* Community Engine - bills itself as a "plugin"
+* Insoshi
+* Ning (furniture included!)
+* Bort, etc (just the walls, please)
+* ... and many more ...
 
 #### Enter Insoshi
 
-* see also bort, etc
 * advantage of having a lot of the interactions laid out for you
 * disadvantage: having interactions laid out for you
 
@@ -105,8 +143,14 @@ Prefab:
 * Join some social networks and start using them
 * consider this an education in user interaction and user experience
 
-### Sources, etc
+### Sources, Resources, and paths for further exploration
 
-* ...
+* Wikipedia article on "Social Network" http://en.wikipedia.org/wiki/Social_network
+* Jim Neath > Building a Social Network Site in Rails: http://jimneath.org/2008/04/25/building-a-social-network-site-in-rails/
+* MissingMethod > How To Build a Social Network with Ruby on Rails:  http://www.missingmethod.com/2007/01/08/how-to-build-a-social-network-with-ruby-on-rails/
+
+* Friendship model examples & self referential models: 
+	* Dan Fischer > Fischyfriends: http://github.com/dfischer/fischyfriends/tree/master
+	* Josh Susser > Self-referential has_many :through associations: http://blog.hasmanythrough.com/2007/10/30/self-referential-has-many-through
 
 
