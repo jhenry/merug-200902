@@ -1,0 +1,5 @@
+@import url(reset.css);
+@import url(typography.css);
+@import url(skin.css);
+
+.example_location {color: #C0C0C0;}
